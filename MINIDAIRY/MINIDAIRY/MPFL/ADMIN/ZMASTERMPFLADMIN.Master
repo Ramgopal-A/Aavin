@@ -1,0 +1,144 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="ZMASTERMPFLADMIN.master.vb" Inherits="MINIDAIRY.ZMASTERMPFLADMIN" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Aavin - Mini Dairy Farm Scheme - Beneficiary Portal</title>
+
+    <!-- Bootstrap 5 CDN -->
+    
+    <link href="/ASSETS/BOOTSTRAP/5.3.7/CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/ASSETS/CONTROLS/UX4G2.0.6/css/accesibility-style-v2.1.css">
+    <link href="/ASSETS/CONTROLS/SELECT2/select2.min.css" rel="stylesheet" />
+    <script src="/ASSETS/JS/JQUERY3.6.0/jquery-3.7.1.min.js"></script>
+    <script src="/ASSETS/CONTROLS/SELECT2/select2.min.js"></script>
+    <link rel="stylesheet" href="/ASSETS/CSS/animate.min.css" />
+    <link href="/ASSETS/CSS/loader.css" rel="stylesheet" />
+    <link href="/ASSETS/CSS/regform.css" rel="stylesheet" />
+
+
+    <style>
+        .txt-logo
+        {
+            font-size:2rem;
+            font-weight:700;
+        }
+        .txt-logo-p
+        {
+            font-size:1.2rem;
+            font-weight:700;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="header_content_holder" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="main_form" runat="server">
+        <div id="staticSelect2Container"></div>
+    <!-- Header -->
+
+
+    <header class="main-header py-2 bg-white border-bottom shadow-sm">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="/ASSETS/IMAGES/logo_fed.jpg" alt="APPLICANT LOGO" class="img-fluid" style="max-height:60px;">
+            </div>
+             <div class="align-items-center">
+                 <strong>
+               <asp:Label ID="lbl_name" runat="server" Text="" CssClass="text-primary"></asp:Label> <br />
+                   <asp:Label ID="lbl_uname" runat="server" Text=""  CssClass="text-success"></asp:Label>
+                </strong>
+             </div>
+        </div>
+
+
+
+    </header>
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary-to-secondary">
+        <div class="container">
+            <a class="navbar-brand d-lg-none" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/MPFL/ADMIN">Home</a></li>
+
+                    <li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Master Data</a>
+ <ul class="dropdown-menu">
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/DIST">District</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/TALUK">Taluk</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/VILLAGE">Village</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/COMMUNITY">Community</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/CASTE">Caste</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/ANIMAL_CAT">Animal Category</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/MPU">Milk Producer Union</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/MPULOG">MPU Login Telegram</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/BANK">Bank</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/BANKLOG">Bank Login Telegram</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/MPFLLOG">MPFL Dashboard Telegram</a></li>
+     <li><a class="dropdown-item" href="/MPFL/ADMIN/LIST/INS_AGENCY">Insurance Agency</a></li>
+
+ </ul>
+                    </li>
+                    <li class="nav-item">
+ <asp:LinkButton ID="lbtn_logout" runat="server" CssClass="nav-link">Logout</asp:LinkButton>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <asp:ContentPlaceHolder ID="top_content_holder" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+
+    <asp:ContentPlaceHolder ID="main_content_holder" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="footer_content_holder" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+    <!-- Footer -->
+    <footer class=" text-white py-2 bg-gradient-primary-to-secondary fixed-bottom">
+        <div class="row m-1">
+            <div class="col col-lg-6 text-center">
+                <small>&copy; 2025 AAVIN. All rights reserved.</small>
+            </div>
+            <div class="col col-lg-6 text-center">
+                <small>Powered by Cogniot Technology Private Limited</small>
+            </div>
+        </div>
+    </footer>
+</form>
+
+    <script>
+        document.getElementById('uw-widget-custom-trigger2').addEventListener('click', function () {
+            openMain();
+        });
+    </script>
+
+
+     <asp:ContentPlaceHolder ID="script_content_holder" runat="server">
+
+     </asp:ContentPlaceHolder>
+
+
+    <script src="/ASSETS/BOOTSTRAP/5.3.7/JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>

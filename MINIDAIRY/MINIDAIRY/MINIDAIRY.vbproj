@@ -1,0 +1,1013 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{6B46070B-344B-4516-BBB5-C10BFA2588C2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MINIDAIRY</RootNamespace>
+    <AssemblyName>MINIDAIRY</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44385</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>MINIDAIRY.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>MINIDAIRY.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\..\..\..\TABCEDCOWEBSITE\TABCEDCO\bin\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\TABCEDCO\TABCEDCO\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\TABCEDCO\TABCEDCO\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>..\..\..\..\TABCEDCO\TABCEDCO\bin\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-grid.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-grid.min.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-grid.rtl.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-grid.rtl.min.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-reboot.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-reboot.min.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-reboot.rtl.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-reboot.rtl.min.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-utilities.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-utilities.min.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-utilities.rtl.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-utilities.rtl.min.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap.min.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap.rtl.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap.rtl.min.css" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.bundle.js" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.bundle.min.js" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.esm.js" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.esm.min.js" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.js" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.min.js" />
+    <Content Include="ASSETS\CONTROLS\CHART\chart.js" />
+    <Content Include="ASSETS\CONTROLS\CHART\chartjs-plugin-datalabels%402.0.js" />
+    <Content Include="ASSETS\CONTROLS\CROPPER\cropper.min.css" />
+    <Content Include="ASSETS\CONTROLS\CROPPER\cropper.min.js" />
+    <Content Include="ASSETS\CONTROLS\DATEPICKER\bootstrap-datepicker.css" />
+    <Content Include="ASSETS\CONTROLS\DATEPICKER\bootstrap-datepicker.js" />
+    <Content Include="ASSETS\CONTROLS\DATEPICKER\gijgo.min.css" />
+    <Content Include="ASSETS\CONTROLS\DATEPICKER\gijgo.min.js" />
+    <Content Include="ASSETS\CONTROLS\EDITOR\editor.css" />
+    <Content Include="ASSETS\CONTROLS\EDITOR\editor.js" />
+    <Content Include="ASSETS\CONTROLS\SELECT2\jquery.min.js" />
+    <Content Include="ASSETS\CONTROLS\SELECT2\select2.min.css" />
+    <Content Include="ASSETS\CONTROLS\SELECT2\select2.min.js" />
+    <Content Include="ASSETS\CONTROLS\TAMILTB\tamiltextbox.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\accesibility-style-v2.1.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-date-time.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-grid.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-grid.min.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-grid.rtl.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-grid.rtl.min.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-min.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-reboot.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-reboot.min.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-reboot.rtl.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-reboot.rtl.min.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-utilities.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-utilities.min.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-utilities.rtl.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g-utilities.rtl.min.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g.rtl.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\css\ux4g.rtl.min.css" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\accessibility-widget.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g-chart-script.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g-chart.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g-date-time-1.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g-date-time-2.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g-main.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g-map-all.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g-map.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g.bundle.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g.bundle.min.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g.esm.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g.esm.min.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\ux4g.min.js" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\js\weights-v1.js" />
+    <Content Include="ASSETS\CSS\admincomponents.css" />
+    <Content Include="ASSETS\CSS\admindashboard.css" />
+    <Content Include="ASSETS\CSS\animate.min.css" />
+    <Content Include="ASSETS\CSS\loader.css" />
+    <Content Include="ASSETS\CSS\loanviewprocess.css" />
+    <Content Include="ASSETS\CSS\regform.css" />
+    <Content Include="ASSETS\CSS\select2.min.css" />
+    <Content Include="ASSETS\CSS\Site.css" />
+    <Content Include="ASSETS\CSS\styles.css" />
+    <Content Include="ASSETS\IMAGES\avinillam.jpg" />
+    <Content Include="ASSETS\IMAGES\logo_avin.jpg" />
+    <Content Include="ASSETS\IMAGES\logo_ben.jpg" />
+    <Content Include="ASSETS\IMAGES\logo_en.jpg" />
+    <Content Include="ASSETS\IMAGES\logo_fed.jpg" />
+    <Content Include="ASSETS\IMAGES\logo_mpcs.jpg" />
+    <Content Include="ASSETS\IMAGES\logo_mpu.jpg" />
+    <Content Include="ASSETS\IMAGES\logo_ta.jpg" />
+    <Content Include="ASSETS\IMAGES\logo_tn.jpg" />
+    <Content Include="ASSETS\IMAGES\off_log_qr.jpg" />
+    <Content Include="ASSETS\JS\all.min.js" />
+    <Content Include="ASSETS\JS\chart.umd.min.js" />
+    <Content Include="ASSETS\JS\jquery-3.6.0.min.js" />
+    <Content Include="ASSETS\JS\JQUERY3.6.0\jquery-3.7.1.min.js" />
+    <Content Include="ASSETS\JS\JQUERY3.6.0\jquery.min.js" />
+    <Content Include="ASSETS\JS\loandocviewer.js" />
+    <Content Include="ASSETS\JS\select2.min.js" />
+    <Content Include="BANK\Default.aspx" />
+    <Content Include="BANK\LOAN\LISTBANKPEND.aspx" />
+    <Content Include="BANK\LOAN\LISTBANKREC.aspx" />
+    <Content Include="BANK\LOAN\LISTBANKREJ.aspx" />
+    <Content Include="BANK\LOAN\LISTMPUREC.aspx" />
+    <Content Include="BANK\REPORT\LOANAPP.aspx" />
+    <Content Include="CONTROLS\CropImageControl.ascx" />
+    <Content Include="CONTROLS\LoanStatus.ascx" />
+    <Content Include="CONTROLS\page_cropimage.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DOCTOR\Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="MPCS\APPPROCESS.aspx" />
+    <Content Include="MPCS\Default.aspx" />
+    <Content Include="MPFL\ADMIN\Default.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\ANIMAL_CAT.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\BANK.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\BANKCNHGAPP.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\BANKLOG.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\CASTE.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\COMMUNITY.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\DIST.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\INS_AGENCY.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\MPFLLOG.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\MPU.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\MPULOG.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\TALUK.aspx" />
+    <Content Include="MPFL\ADMIN\LIST\VILLAGE.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LISTALL.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LISTBANKPEND.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LISTBANKREC.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LISTBANKREJ.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LISTMPUPEND.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LISTMPUREC.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LISTMPUREJ.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LISTOTR.aspx" />
+    <Content Include="MPFL\ADMIN\LOAN\LOANBANKREJ.aspx" />
+    <Content Include="MPFL\DASHBOARD\Default.aspx" />
+    <Content Include="MPFL\DASHBOARD\LOAN\LISTALL.aspx" />
+    <Content Include="MPFL\DASHBOARD\LOAN\LISTBANKPEND.aspx" />
+    <Content Include="MPFL\DASHBOARD\LOAN\LISTBANKREC.aspx" />
+    <Content Include="MPFL\DASHBOARD\LOAN\LISTBANKREJ.aspx" />
+    <Content Include="MPFL\DASHBOARD\LOAN\LISTMPUPEND.aspx" />
+    <Content Include="MPFL\DASHBOARD\LOAN\LISTMPUREC.aspx" />
+    <Content Include="MPFL\DASHBOARD\LOAN\LISTMPUREJ.aspx" />
+    <Content Include="MPFL\DASHBOARD\LOAN\LISTOTR.aspx" />
+    <Content Include="MPU\Default.aspx" />
+    <Content Include="MPU\LIST\DOCTOR.aspx" />
+    <Content Include="MPU\LIST\MPCS.aspx" />
+    <Content Include="MPU\LIST\MPCSLOG.aspx" />
+    <Content Include="MPU\LOAN\APPLOAN.aspx" />
+    <Content Include="MPU\LOAN\APPPROCESS.aspx" />
+    <Content Include="MPU\LOAN\LISTALL.aspx" />
+    <Content Include="MPU\LOAN\LISTBANKPEND.aspx" />
+    <Content Include="MPU\LOAN\LISTBANKREC.aspx" />
+    <Content Include="MPU\LOAN\LISTBANKREJ.aspx" />
+    <Content Include="MPU\LOAN\LISTMPUPEND.aspx" />
+    <Content Include="MPU\LOAN\LISTMPUREC.aspx" />
+    <Content Include="MPU\LOAN\LISTMPUREJ.aspx" />
+    <Content Include="MPU\LOAN\LISTOTR.aspx" />
+    <Content Include="ONLINE\BEN\APPSTAT.aspx" />
+    <Content Include="ONLINE\BEN\Default.aspx" />
+    <Content Include="ONLINE\BEN\FILEUPLOAD.aspx" />
+    <Content Include="ONLINE\BEN\LOANAPP.aspx" />
+    <Content Include="ONLINE\FORGETPASS.aspx" />
+    <Content Include="ONLINE\OFFICER.aspx" />
+    <Content Include="ONLINE\Default.aspx" />
+    <Content Include="ONLINE\REGBEN1.aspx" />
+    <Content Include="ONLINE\REGBEN2.aspx" />
+    <Content Include="ONLINE\REGCOMP.aspx" />
+    <Content Include="ONLINE\ZPROG.aspx" />
+    <Content Include="Page2.aspx" />
+    <Content Include="snap.aspx" />
+    <Content Include="TA\Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BANK\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BANK\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BANK\LOAN\LISTBANKPEND.aspx.designer.vb">
+      <DependentUpon>LISTBANKPEND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BANK\LOAN\LISTBANKPEND.aspx.vb">
+      <DependentUpon>LISTBANKPEND.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BANK\LOAN\LISTBANKREC.aspx.designer.vb">
+      <DependentUpon>LISTBANKREC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BANK\LOAN\LISTBANKREC.aspx.vb">
+      <DependentUpon>LISTBANKREC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BANK\LOAN\LISTBANKREJ.aspx.designer.vb">
+      <DependentUpon>LISTBANKREJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BANK\LOAN\LISTBANKREJ.aspx.vb">
+      <DependentUpon>LISTBANKREJ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BANK\LOAN\LISTMPUREC.aspx.designer.vb">
+      <DependentUpon>LISTMPUREC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BANK\LOAN\LISTMPUREC.aspx.vb">
+      <DependentUpon>LISTMPUREC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BANK\REPORT\LOANAPP.aspx.designer.vb">
+      <DependentUpon>LOANAPP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BANK\REPORT\LOANAPP.aspx.vb">
+      <DependentUpon>LOANAPP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BANK\ZMASTERBANK.Master.designer.vb">
+      <DependentUpon>ZMASTERBANK.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BANK\ZMASTERBANK.Master.vb">
+      <DependentUpon>ZMASTERBANK.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bgr.vb" />
+    <Compile Include="bgrdb.vb" />
+    <Compile Include="bgrdd.vb" />
+    <Compile Include="bgrdttbl.vb" />
+    <Compile Include="bgrenc.vb" />
+    <Compile Include="bgrgv.vb" />
+    <Compile Include="bgrlv.vb" />
+    <Compile Include="bgrsms.vb" />
+    <Compile Include="bgr_amt2word.vb" />
+    <Compile Include="CONTROLS\CropImageControl.ascx.designer.vb">
+      <DependentUpon>CropImageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLS\CropImageControl.ascx.vb">
+      <DependentUpon>CropImageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLS\LoanStatus.ascx.designer.vb">
+      <DependentUpon>LoanStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLS\LoanStatus.ascx.vb">
+      <DependentUpon>LoanStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLS\page_cropimage.aspx.designer.vb">
+      <DependentUpon>page_cropimage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROLS\page_cropimage.aspx.vb">
+      <DependentUpon>page_cropimage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DOCTOR\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DOCTOR\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DOCTOR\ZMASTERDOCTOR.Master.designer.vb">
+      <DependentUpon>ZMASTERDOCTOR.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DOCTOR\ZMASTERDOCTOR.Master.vb">
+      <DependentUpon>ZMASTERDOCTOR.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MPCS\APPPROCESS.aspx.designer.vb">
+      <DependentUpon>APPPROCESS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPCS\APPPROCESS.aspx.vb">
+      <DependentUpon>APPPROCESS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPCS\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPCS\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPCS\ZMASTERMPCS.Master.designer.vb">
+      <DependentUpon>ZMASTERMPCS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPCS\ZMASTERMPCS.Master.vb">
+      <DependentUpon>ZMASTERMPCS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\ANIMAL_CAT.aspx.designer.vb">
+      <DependentUpon>ANIMAL_CAT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\ANIMAL_CAT.aspx.vb">
+      <DependentUpon>ANIMAL_CAT.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\BANK.aspx.designer.vb">
+      <DependentUpon>BANK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\BANK.aspx.vb">
+      <DependentUpon>BANK.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\BANKCNHGAPP.aspx.designer.vb">
+      <DependentUpon>BANKCNHGAPP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\BANKCNHGAPP.aspx.vb">
+      <DependentUpon>BANKCNHGAPP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\BANKLOG.aspx.designer.vb">
+      <DependentUpon>BANKLOG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\BANKLOG.aspx.vb">
+      <DependentUpon>BANKLOG.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\CASTE.aspx.designer.vb">
+      <DependentUpon>CASTE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\CASTE.aspx.vb">
+      <DependentUpon>CASTE.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\COMMUNITY.aspx.designer.vb">
+      <DependentUpon>COMMUNITY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\COMMUNITY.aspx.vb">
+      <DependentUpon>COMMUNITY.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\DIST.aspx.designer.vb">
+      <DependentUpon>DIST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\DIST.aspx.vb">
+      <DependentUpon>DIST.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\INS_AGENCY.aspx.designer.vb">
+      <DependentUpon>INS_AGENCY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\INS_AGENCY.aspx.vb">
+      <DependentUpon>INS_AGENCY.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\MPFLLOG.aspx.designer.vb">
+      <DependentUpon>MPFLLOG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\MPFLLOG.aspx.vb">
+      <DependentUpon>MPFLLOG.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\MPU.aspx.designer.vb">
+      <DependentUpon>MPU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\MPU.aspx.vb">
+      <DependentUpon>MPU.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\MPULOG.aspx.designer.vb">
+      <DependentUpon>MPULOG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\MPULOG.aspx.vb">
+      <DependentUpon>MPULOG.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\TALUK.aspx.designer.vb">
+      <DependentUpon>TALUK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\TALUK.aspx.vb">
+      <DependentUpon>TALUK.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\VILLAGE.aspx.designer.vb">
+      <DependentUpon>VILLAGE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LIST\VILLAGE.aspx.vb">
+      <DependentUpon>VILLAGE.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTALL.aspx.designer.vb">
+      <DependentUpon>LISTALL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTALL.aspx.vb">
+      <DependentUpon>LISTALL.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTBANKPEND.aspx.designer.vb">
+      <DependentUpon>LISTBANKPEND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTBANKPEND.aspx.vb">
+      <DependentUpon>LISTBANKPEND.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTBANKREC.aspx.designer.vb">
+      <DependentUpon>LISTBANKREC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTBANKREC.aspx.vb">
+      <DependentUpon>LISTBANKREC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTBANKREJ.aspx.designer.vb">
+      <DependentUpon>LISTBANKREJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTBANKREJ.aspx.vb">
+      <DependentUpon>LISTBANKREJ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTMPUPEND.aspx.designer.vb">
+      <DependentUpon>LISTMPUPEND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTMPUPEND.aspx.vb">
+      <DependentUpon>LISTMPUPEND.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTMPUREC.aspx.designer.vb">
+      <DependentUpon>LISTMPUREC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTMPUREC.aspx.vb">
+      <DependentUpon>LISTMPUREC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTMPUREJ.aspx.designer.vb">
+      <DependentUpon>LISTMPUREJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTMPUREJ.aspx.vb">
+      <DependentUpon>LISTMPUREJ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTOTR.aspx.designer.vb">
+      <DependentUpon>LISTOTR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LISTOTR.aspx.vb">
+      <DependentUpon>LISTOTR.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LOANBANKREJ.aspx.designer.vb">
+      <DependentUpon>LOANBANKREJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\LOAN\LOANBANKREJ.aspx.vb">
+      <DependentUpon>LOANBANKREJ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\ZMASTERMPFLADMIN.Master.designer.vb">
+      <DependentUpon>ZMASTERMPFLADMIN.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\ADMIN\ZMASTERMPFLADMIN.Master.vb">
+      <DependentUpon>ZMASTERMPFLADMIN.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTALL.aspx.designer.vb">
+      <DependentUpon>LISTALL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTALL.aspx.vb">
+      <DependentUpon>LISTALL.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTBANKPEND.aspx.designer.vb">
+      <DependentUpon>LISTBANKPEND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTBANKPEND.aspx.vb">
+      <DependentUpon>LISTBANKPEND.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTBANKREC.aspx.designer.vb">
+      <DependentUpon>LISTBANKREC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTBANKREC.aspx.vb">
+      <DependentUpon>LISTBANKREC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTBANKREJ.aspx.designer.vb">
+      <DependentUpon>LISTBANKREJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTBANKREJ.aspx.vb">
+      <DependentUpon>LISTBANKREJ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTMPUPEND.aspx.designer.vb">
+      <DependentUpon>LISTMPUPEND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTMPUPEND.aspx.vb">
+      <DependentUpon>LISTMPUPEND.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTMPUREC.aspx.designer.vb">
+      <DependentUpon>LISTMPUREC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTMPUREC.aspx.vb">
+      <DependentUpon>LISTMPUREC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTMPUREJ.aspx.designer.vb">
+      <DependentUpon>LISTMPUREJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTMPUREJ.aspx.vb">
+      <DependentUpon>LISTMPUREJ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTOTR.aspx.designer.vb">
+      <DependentUpon>LISTOTR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\LOAN\LISTOTR.aspx.vb">
+      <DependentUpon>LISTOTR.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\ZMASTERMPFLDASH.Master.designer.vb">
+      <DependentUpon>ZMASTERMPFLDASH.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPFL\DASHBOARD\ZMASTERMPFLDASH.Master.vb">
+      <DependentUpon>ZMASTERMPFLDASH.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MPU\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LIST\DOCTOR.aspx.designer.vb">
+      <DependentUpon>DOCTOR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LIST\DOCTOR.aspx.vb">
+      <DependentUpon>DOCTOR.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LIST\MPCS.aspx.designer.vb">
+      <DependentUpon>MPCS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LIST\MPCS.aspx.vb">
+      <DependentUpon>MPCS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LIST\MPCSLOG.aspx.designer.vb">
+      <DependentUpon>MPCSLOG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LIST\MPCSLOG.aspx.vb">
+      <DependentUpon>MPCSLOG.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\APPLOAN.aspx.designer.vb">
+      <DependentUpon>APPLOAN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\APPLOAN.aspx.vb">
+      <DependentUpon>APPLOAN.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\APPPROCESS.aspx.designer.vb">
+      <DependentUpon>APPPROCESS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\APPPROCESS.aspx.vb">
+      <DependentUpon>APPPROCESS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTALL.aspx.designer.vb">
+      <DependentUpon>LISTALL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTALL.aspx.vb">
+      <DependentUpon>LISTALL.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTBANKPEND.aspx.designer.vb">
+      <DependentUpon>LISTBANKPEND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTBANKPEND.aspx.vb">
+      <DependentUpon>LISTBANKPEND.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTBANKREC.aspx.designer.vb">
+      <DependentUpon>LISTBANKREC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTBANKREC.aspx.vb">
+      <DependentUpon>LISTBANKREC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTBANKREJ.aspx.designer.vb">
+      <DependentUpon>LISTBANKREJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTBANKREJ.aspx.vb">
+      <DependentUpon>LISTBANKREJ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTMPUPEND.aspx.designer.vb">
+      <DependentUpon>LISTMPUPEND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTMPUPEND.aspx.vb">
+      <DependentUpon>LISTMPUPEND.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTMPUREC.aspx.designer.vb">
+      <DependentUpon>LISTMPUREC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTMPUREC.aspx.vb">
+      <DependentUpon>LISTMPUREC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTMPUREJ.aspx.designer.vb">
+      <DependentUpon>LISTMPUREJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTMPUREJ.aspx.vb">
+      <DependentUpon>LISTMPUREJ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTOTR.aspx.designer.vb">
+      <DependentUpon>LISTOTR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\LOAN\LISTOTR.aspx.vb">
+      <DependentUpon>LISTOTR.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MPU\ZMASTERMPU.Master.designer.vb">
+      <DependentUpon>ZMASTERMPU.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MPU\ZMASTERMPU.Master.vb">
+      <DependentUpon>ZMASTERMPU.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ONLINE\BEN\APPSTAT.aspx.designer.vb">
+      <DependentUpon>APPSTAT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\BEN\APPSTAT.aspx.vb">
+      <DependentUpon>APPSTAT.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\BEN\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\BEN\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\BEN\FILEUPLOAD.aspx.designer.vb">
+      <DependentUpon>FILEUPLOAD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\BEN\FILEUPLOAD.aspx.vb">
+      <DependentUpon>FILEUPLOAD.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\BEN\LOANAPP.aspx.designer.vb">
+      <DependentUpon>LOANAPP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\BEN\LOANAPP.aspx.vb">
+      <DependentUpon>LOANAPP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\BEN\ZMASTERBEN.Master.designer.vb">
+      <DependentUpon>ZMASTERBEN.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\BEN\ZMASTERBEN.Master.vb">
+      <DependentUpon>ZMASTERBEN.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\FORGETPASS.aspx.designer.vb">
+      <DependentUpon>FORGETPASS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\FORGETPASS.aspx.vb">
+      <DependentUpon>FORGETPASS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\OFFICER.aspx.designer.vb">
+      <DependentUpon>OFFICER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\OFFICER.aspx.vb">
+      <DependentUpon>OFFICER.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\REGBEN1.aspx.designer.vb">
+      <DependentUpon>REGBEN1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\REGBEN1.aspx.vb">
+      <DependentUpon>REGBEN1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\REGBEN2.aspx.designer.vb">
+      <DependentUpon>REGBEN2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\REGBEN2.aspx.vb">
+      <DependentUpon>REGBEN2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\REGCOMP.aspx.designer.vb">
+      <DependentUpon>REGCOMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\REGCOMP.aspx.vb">
+      <DependentUpon>REGCOMP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ONLINE\ZPROG.aspx.designer.vb">
+      <DependentUpon>ZPROG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ONLINE\ZPROG.aspx.vb">
+      <DependentUpon>ZPROG.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Page2.aspx.designer.vb">
+      <DependentUpon>Page2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page2.aspx.vb">
+      <DependentUpon>Page2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="snap.aspx.designer.vb">
+      <DependentUpon>snap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="snap.aspx.vb">
+      <DependentUpon>snap.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TA\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TA\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ZMASTEREN.Master.designer.vb">
+      <DependentUpon>ZMASTEREN.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ZMASTEREN.Master.vb">
+      <DependentUpon>ZMASTEREN.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZMASTERTA.Master.designer.vb">
+      <DependentUpon>ZMASTERTA.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ZMASTERTA.Master.vb">
+      <DependentUpon>ZMASTERTA.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZSite1.Master.designer.vb">
+      <DependentUpon>ZSite1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ZSite1.Master.vb">
+      <DependentUpon>ZSite1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-grid.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-grid.min.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-grid.rtl.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-reboot.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-reboot.min.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-reboot.rtl.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-utilities.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-utilities.min.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-utilities.rtl.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap.min.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap.rtl.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\CSS\bootstrap.rtl.min.css.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.bundle.js.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.bundle.min.js.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.esm.js.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.esm.min.js.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.js.map" />
+    <Content Include="ASSETS\BOOTSTRAP\5.3.7\JS\bootstrap.min.js.map" />
+    <Content Include="ASSETS\CONTROLS\UX4G2.0.6\fonts\NotoSans-Regular.ttf" />
+    <Content Include="MPCS\ZMASTERMPCS.Master" />
+    <Content Include="MPU\ZMASTERMPU.Master" />
+    <Content Include="MPFL\ADMIN\ZMASTERMPFLADMIN.Master" />
+    <Content Include="MPFL\DASHBOARD\ZMASTERMPFLDASH.Master" />
+    <Content Include="BANK\ZMASTERBANK.Master" />
+    <Content Include="DOCTOR\ZMASTERDOCTOR.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="ONLINE\BEN\ZMASTERBEN.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="ZMASTEREN.Master" />
+    <Content Include="ZMASTERTA.Master" />
+    <Content Include="ZSite1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UPLOAD\DOC\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7434</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44385/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

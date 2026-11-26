@@ -1,0 +1,16 @@
+﻿/* ── Supplemental styles (Bootstrap 5 is loaded from CDN) ── */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table th {
+    white-space: nowrap;
+}
+
+.btn {
+    white-space: nowrap;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f8f9fa;
+}

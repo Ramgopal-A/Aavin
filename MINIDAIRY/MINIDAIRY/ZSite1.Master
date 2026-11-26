@@ -1,0 +1,24 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="ZSite1.master.vb" Inherits="MINIDAIRY.ZSite1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    COGNIOT TECHNOLOGY PRIVATE LIMITED
+
+    <br />
+    <a href="webform1.aspx"> Page 1</a>
+    <a href="Page2.aspx">Page 2</a>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="main" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
