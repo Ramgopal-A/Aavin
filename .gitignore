@@ -1,0 +1,39 @@
+# Core bgr helper files
+bgr.vb
+bgr_amt2word.vb
+bgrdb.vb
+bgrdd.vb
+bgrdttbl.vb
+bgrenc.vb
+bgrgv.vb
+bgrlv.vb
+bgrsms.vb
+
+# Config & secrets
+Web.config
+web.config
+*.local.*
+.env
+
+# Visual Studio & .NET build outputs
+[Bb]in/
+[Oo]bj/
+.vs/
+packages/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.cache
+*.pdb
+*.log
+
+# Uploaded user files & runtime folders
+UPLOAD/
+Uploads/
+App_Data/
+
+# OS & editor files
+Thumbs.db
+Desktop.ini
+.DS_Store
